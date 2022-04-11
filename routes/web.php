@@ -21,6 +21,9 @@ Route::get('introduction', function () {
 Route::get('etc', function () {
     return view('etc');
 });
+Route::get('recommend', function () {
+    return view('recommend');
+});
 Route::get('ad', function () {
     return view('ad');
 });
@@ -33,8 +36,6 @@ Route::get('/error', function () {
 Route::resource('posts', 'PostController');
 
 Route::resource('frees', 'FreeController');
-
-Route::resource('ivents', 'IventController');
 
 Route::resource('yets', 'YetController');
 
@@ -63,5 +64,7 @@ Route::get('/List', 'FriendController@list');
 Route::get('/askList', 'FriendController@asklist');
 
 Route::delete('/yesterday', 'FriendController@yesterday');
+
+Route::delete('/reduce', 'CommentController@reduce');
 
 Route::resource('jobs', 'JobController');

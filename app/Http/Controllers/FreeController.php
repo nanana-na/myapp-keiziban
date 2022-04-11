@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\FreeRequest;
 use App\Free;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
 

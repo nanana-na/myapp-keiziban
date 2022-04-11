@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\CommentRequest;
 use App\Comment;
 use App\Free;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -100,5 +101,16 @@ class CommentController extends Controller
         $comment = Comment::find($request->comment_id);
         $comment->delete();
         return redirect('/frees');
+    }
+    public function reduce()
+    {
+        if (Auth::user()->number !== '20238297') {
+            return redirect()->route('friends.index')->with('flash_message', 'エラーが出ました');
+        }
+        $today = new Carbon('today');
+        $today->subDays(3);
+        $comment = Comment::where('created_at', '<', $today);
+        $comment->delete();
+        return redirect()->route('frees.index');
     }
 }

@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -25,9 +29,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        if (!isset(Auth::user()->number)) {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
         $user_number = Auth::user()->number;
         if ($user_number !== '20238297') {
             return  redirect('/error');
@@ -43,9 +44,6 @@ class AdminController extends Controller
      */
     public function create()
     {
-        if (!isset(Auth::user()->number)) {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
         $user_number = Auth::user()->number;
         if ($user_number !== '20238297') {
             return  redirect('/error');
@@ -61,9 +59,6 @@ class AdminController extends Controller
      */
     public function store(AdminRequest $request)
     {
-        if (!isset(Auth::user()->number)) {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
         $user_number = Auth::user()->number;
         if ($user_number !== '20238297') {
             return  redirect('/error');
@@ -84,9 +79,6 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        if (!isset(Auth::user()->number)) {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
         $user_number = Auth::user()->number;
         if ($user_number !== '20238297') {
             return  redirect('/error');
@@ -103,9 +95,6 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        if (!isset(Auth::user()->number)) {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
         $user_number = Auth::user()->number;
         if ($user_number !== '20238297') {
             return  redirect('/error');
@@ -123,9 +112,6 @@ class AdminController extends Controller
      */
     public function update(AdminupRequest $request, $id)
     {
-        if (!isset(Auth::user()->number)) {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
         $user_number = Auth::user()->number;
         if ($user_number !== '20238297') {
             return  redirect('/error');
@@ -148,9 +134,6 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        if (!isset(Auth::user()->number)) {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
         $user_number = Auth::user()->number;
         if ($user_number !== '20238297') {
             return  redirect('/error');

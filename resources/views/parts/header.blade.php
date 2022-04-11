@@ -34,10 +34,17 @@
       </a></li>
   </ul>
 </div>
-<form style="display: inline-block;" method="POST" action="/yesterday">
-  {{ csrf_field() }}
-  {{ method_field('DELETE') }}
-  <button class="btn btn-hai" onclick='return confirm("削除しますか？");'><span style="font-size: 8px;">昨日の分を消す</span></button>
-</form>
+<div class="text-center">
+  <form style="display: inline-block;" method="POST" action="/yesterday">
+    {{ csrf_field() }}
+    {{ method_field('DELETE') }}
+    <button class="btn btn-hai" onclick='return confirm("削除しますか？");'><span style="font-size: 8px;">昨日の分を消す</span></button>
+  </form>
+  <form style="display: inline-block;" method="POST" action="/reduce">
+    {{ csrf_field() }}
+    {{ method_field('DELETE') }}
+    <button class="btn btn-hai" onclick='return confirm("削除しますか？");'><span style="font-size: 8px;">掲示板の3日前のコメントを消す</span></button>
+  </form>
+</div>
 @endif
 @endif

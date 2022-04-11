@@ -11432,9 +11432,9 @@ background-size: contain;
 padding: 5px;
 }
 .comment-box  {
-position: fixed;
+position: absolute;
 width: 100%;
-bottom: 0px;
+bottom: 10px;
 right: 0;
 z-index: 1;
 }
@@ -11449,7 +11449,6 @@ z-index: 1;
   background-color: white;
   border-radius: 3px;
 }
-
 .friend-box {
 display: block;
 width: 100%;
@@ -11524,7 +11523,13 @@ padding: 0 5px;
     margin: 0;
     padding: 0 10px;
 }
-
+@media (max-width: 800px) {
+  .comment-ul{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
 @media (min-width: 800px) {
 .comment-box{
   position: relative;
@@ -11626,6 +11631,6 @@ padding: 3px;
 }
 @media (max-width: 374px) {
 .navbar-brand{
-  font-size: 18px;
+  font-size: 22px;
 }
 }
