@@ -11623,6 +11623,7 @@ footer {
   .comment-ul .form-group textarea {
     height: 80px;
     width: 300px;
+    font-size: 16px;
   }
 
   .send-btn {
@@ -11634,7 +11635,7 @@ footer {
 
 @media (max-width: 800px) {
   .comment-box:focus-within {
-    position: fixed;
+    position: absolute;
     top: 350px;
   }
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container" style="position: relative;">
   <div class="row justify-content-center">
     <div class="col-md-8 mb-3" style="max-width: 700px;">
       @if (null!==$user_id)
