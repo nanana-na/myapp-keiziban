@@ -11501,11 +11501,16 @@ footer {
 }
 
 .comment-box {
-  position: fixed;
+  position: relative;
   width: 100%;
-  bottom: 10px;
   right: 0;
   z-index: 1;
+}
+
+.comment-box.fix {
+  position: sticky;
+  right: 0;
+  top: 5px;
 }
 
 .send-btn {
@@ -11612,6 +11617,7 @@ footer {
 @media (min-width: 800px) {
   .comment-box {
     position: relative;
+
     z-index: auto;
   }
 
@@ -11635,6 +11641,7 @@ footer {
 @media (max-width: 800px) {
   .comment-box:focus-within {
     position: relative;
+    margin-top: 20px;
   }
 
   .comment-ul {

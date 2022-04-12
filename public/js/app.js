@@ -50023,3 +50023,15 @@ $("form").submit(function () {
     $(":submit", self).prop("disabled", false);
   }, 10000);
 });
+
+$(function () {
+  let target = $(".comment-box").offset().top;
+  $(window).on("scroll", function () {
+    let currentPos = $(window).scrollTop();
+    if (currentPos > target) {
+      $(".comment-box").addClass('fix');
+    } else {
+      $(".comment-box").removeClass('fix');
+    }
+  });
+});
