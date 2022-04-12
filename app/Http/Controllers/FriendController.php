@@ -78,7 +78,7 @@ class FriendController extends Controller
         $user_id  = Auth::id();
         $asks = new Ask;
         $asks = Ask::where('ask_id', $user_id)->get();
-        $asks = $asks->where('evaluation', 2);
+        $asks = $asks->where('evaluation', '>', 1)->sortBy('evaluation');
         $asks->load('friend');
         $asks->load('user');
         return view('lists.asklist', compact('asks', 'user_id'));
