@@ -11621,7 +11621,7 @@ footer {
   }
 
   .comment-ul .form-group textarea {
-    height: 80px;
+    height: 100px;
     width: 300px;
     font-size: 16px;
   }
@@ -11635,8 +11635,8 @@ footer {
 
 @media (max-width: 800px) {
   .comment-box:focus-within {
-    position: absolute;
-    top: 350px;
+    position: fixed;
+    top: 30px;
   }
 
   .comment-ul {
