@@ -11634,7 +11634,8 @@ footer {
 
 @media (max-width: 800px) {
   .comment-box:focus-within {
-    top: 100px;
+    bottom: 50vh;
+    top: 50vh;
   }
 
   .comment-ul {
