@@ -1,31 +1,9 @@
 @extends('layouts.app')
 @section('content')
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8 mb-3" style="max-width: 700px;">
-      @if (null!==$user_id)
-
-      <div class="comment-box w-100">
-        <form action="{{ route('friendmessages.store') }}" method="POST">
-          @csrf
-          <ul class="comment-ul">
-            <li>
-              <input type="hidden" name="friend_id" value="{{ $friend->id }}">
-              <div class="form-group">
-                <textarea class="form-control" placeholder="内容" cols="40" rows="1" name="body"></textarea>
-              </div>
-            </li>
-            <li>
-              <button type="submit" class="btn btn-primary send-btn"><i class="bi bi-send"></i></button>
-            </li>
-          </ul>
-        </form>
-      </div>
-      @else
-      <div class="mb-4 text-center" style="margin-top:30px;">
-        <a href="{{ route('register') }}" class="mt-4 btn btn-primary">ログインしてコメントを書く</a>
-      </div>
-      @endif
       <div class="pb-2 bg-white">
         <div class="friend-show">
           @if ($user_id == $friend->user_id)
@@ -60,6 +38,29 @@
     @foreach ($errors->all() as $error)
     <p style="margin: 3px;">{{ $error }}</p>
     @endforeach
+  </div>
+  @endif
+  @if (null!==$user_id)
+
+  <div class="comment-box w-100">
+    <form action="{{ route('friendmessages.store') }}" method="POST">
+      @csrf
+      <ul class="comment-ul">
+        <li>
+          <input type="hidden" name="friend_id" value="{{ $friend->id }}">
+          <div class="form-group">
+            <textarea class="form-control" placeholder="内容" cols="40" rows="1" name="body"></textarea>
+          </div>
+        </li>
+        <li>
+          <button type="submit" class="btn btn-primary send-btn"><i class="bi bi-send"></i></button>
+        </li>
+      </ul>
+    </form>
+  </div>
+  @else
+  <div class="mb-4 text-center" style="margin-top:30px;">
+    <a href="{{ route('register') }}" class="mt-4 btn btn-primary">ログインしてコメントを書く</a>
   </div>
   @endif
   <div class="row justify-content-center">
