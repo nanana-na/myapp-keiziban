@@ -11508,8 +11508,8 @@ footer {
 }
 
 .comment-box.fix {
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
+  width: ;
   right: 0;
   top: 5px;
 }
