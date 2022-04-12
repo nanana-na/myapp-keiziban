@@ -83,7 +83,7 @@
               </li>
             </ul>
           </div>
-          <p style="text-align: right; margin-right:5px;">{{ $friendmessage->body }}</p>
+          <p style="text-align: right; margin-right:15px;">{{ $friendmessage->body }}</p>
         </article>
         @else
         <article>
@@ -98,7 +98,7 @@
               </li>
             </ul>
           </div>
-          <p style="margin-left: 5px;">{{ $friendmessage->body }}</p>
+          <p style="margin-left: 15px;">{{ $friendmessage->body }}</p>
         </article>
         @endif
         @endforeach

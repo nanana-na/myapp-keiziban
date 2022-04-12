@@ -52,23 +52,6 @@
           <label>特徴</label>
           <textarea class="form-control" placeholder="特徴" rows="5" name="feature">{{ old('feature') }}</textarea>
 
-          <input type="checkbox" id="scales" name="feature" value="1"> <label></label>
-          <input type="checkbox" id="scales" name="feature" value="2"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="3"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="4"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="5"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="6"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="7"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="8"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="9"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="10"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="11"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="12"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="13"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="14"> <label>Scales</label>
-          <input type="checkbox" id="scales" name="feature" value="15"> <label>Scales</label>
-
-
           <div class="form-group">
             <label>電話番号</label>
             <div class="form-group">
