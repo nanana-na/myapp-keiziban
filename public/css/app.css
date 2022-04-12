@@ -11637,7 +11637,7 @@ footer {
   .comment-box:focus-within {
     position: fixed;
     bottom: 55%;
-    top: 45%;
+    top: 230px;
   }
 
   .comment-ul {
