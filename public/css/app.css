@@ -11511,7 +11511,7 @@ footer {
   position: fixed;
   position: -webkit-fixed;
   right: 0;
-  bottom: 5px;
+  top: 5px;
 }
 
 .send-btn {
