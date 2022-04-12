@@ -11509,7 +11509,7 @@ footer {
 
 .comment-box.fix {
   position: fixed;
-  width: ;
+  position: -webkit-fixed;
   right: 0;
   top: 5px;
 }
