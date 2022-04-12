@@ -11503,7 +11503,7 @@ footer {
 .comment-box {
   position: fixed;
   width: 100%;
-  bottom: 10px;
+  bottom: 30px;
   right: 0;
   z-index: 1;
 }
@@ -11636,6 +11636,7 @@ footer {
   .comment-box:focus-within {
     position: fixed;
     top: 250px;
+    bottom: 30px;
   }
 
   .comment-ul {
