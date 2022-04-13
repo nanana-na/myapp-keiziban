@@ -39,7 +39,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <div class="logo" style="font-family:Verdana;font-weight:bold;">
                         <a class=" navbar-brand" style="font-family: 'Yuji Boku', serif;" href="{{ route('posts.index') }}">
-                            学生掲示板(仮)
+                            佐大学生掲示板(仮)
                         </a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
