@@ -24,11 +24,14 @@ class AskController extends Controller
      */
     public function index()
     {
+        $user = User::find(Auth::id());
+        $user->ask_alert = 0;
+        $user->save();
         $asks = new Ask;
         $user_id = Auth::id();
         $asks = Ask::where('user_id', $user_id)->where('evaluation', '<', '3')->orderby('evaluation', 'asc')->get();
         $asks->load('ask', 'friend');
-        return view('asks.index', compact('asks'));
+        return view('asks.index', compact('asks', 'user'));
     }
 
     /**
@@ -78,6 +81,9 @@ class AskController extends Controller
         $ask->user_id = $request->user_id;
         $ask->evaluation = 1;
         $ask->save();
+        $user = User::find($request->user_id);
+        $user->ask_alert += 1;
+        $user->save();
         return redirect()->route('friends.index');
     }
 

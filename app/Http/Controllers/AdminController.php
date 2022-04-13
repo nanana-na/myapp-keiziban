@@ -119,6 +119,7 @@ class AdminController extends Controller
         $user = User::find($id);
         $user->name = $request->name;
         $user->count = $request->count;
+        $user->ask_count = $request->ask_count;
         if (isset($request->password)) {
             $user->password = Hash::make($request->password);
         }

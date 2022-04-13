@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->bigInteger('count')->default(0);
             $table->bigInteger('ask_count')->default(0);
+            $table->bigInteger('ask_alert')->default(0);
             $table->string('image_path')->nullable();
             $table->rememberToken();
             $table->timestamps();

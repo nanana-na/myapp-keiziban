@@ -27,6 +27,8 @@ class FriendController extends Controller
      */
     public function index()
     {
+        $user_id  = Auth::id();
+        $user = User::find($user_id);
         $friends = new Friend;
         $now = new DateTime();
         $today = Carbon::today();
@@ -37,12 +39,13 @@ class FriendController extends Controller
         $friends->day = $today;
         $friends->day_name = "今日";
         $friends->load('user');
-        $user_id  = Auth::id();
-        return view('friends.index', compact('friends', 'user_id'));
+        return view('friends.index', compact('friends', 'user', 'user_id'));
     }
 
     public function tomorrow(Request $request)
     {
+        $user_id  = Auth::id();
+        $user = User::find($user_id);
         $friends = new Friend;
         $today = Carbon::today();
         if ($request->day == 0) {
@@ -61,27 +64,28 @@ class FriendController extends Controller
         $friends->day = $today;
         $friends->day_name = $day_name;
         $friends->load('user');
-        $user_id  = Auth::id();
-        return view('friends.index', compact('friends', 'user_id'));
+        return view('friends.index', compact('friends', 'user', 'user_id'));
     }
     public function list()
     {
         $user_id  = Auth::id();
+        $user = User::find($user_id);
         $friends = new Friend;
         $friends = Friend::all()->sortBy('enjoy_time')->sortBy('enjoy_day');
         $friends = $friends->where('user_id', $user_id);
         $friends->load('user');
-        return view('lists.index', compact('friends', 'user_id'));
+        return view('lists.index', compact('friends', 'user', 'user_id'));
     }
     public function asklist()
     {
         $user_id  = Auth::id();
+        $user = User::find($user_id);
         $asks = new Ask;
         $asks = Ask::where('ask_id', $user_id)->get();
         $asks = $asks->where('evaluation', '>', 1)->sortBy('evaluation');
         $asks->load('friend');
         $asks->load('user');
-        return view('lists.asklist', compact('asks', 'user_id'));
+        return view('lists.asklist', compact('asks', 'user', 'user_id'));
     }
     /**
      * Show the form for creating a new resource.

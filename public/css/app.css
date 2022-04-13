@@ -11726,7 +11726,7 @@ footer {
   padding: 3px;
 }
 
-.pop a i::after {
+.pop::after {
   content: "！";
   position: absolute;
   top: -5px;
@@ -11751,8 +11751,9 @@ footer {
   font-size: 25px;
 }
 
-@media (max-width: 374px) {
+@media (max-width: 400px) {
   .navbar-brand {
     font-size: 22px;
+    margin-right: 0;
   }
 }

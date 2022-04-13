@@ -6,6 +6,9 @@
   {{ session('flash_message') }}
 </div>
 @endif
+@if($user->ask_count > 0)
+{{$user->ask_count}}
+@endif
 <div class="container" style="max-width: 480px; position:relative;">
   <div>
     <h2><span class=" badge badge-info text-white mr-auto">交流</span></h2>

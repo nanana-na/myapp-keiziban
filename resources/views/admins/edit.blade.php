@@ -27,6 +27,12 @@
               <input type="text" class="form-control" placeholder="カウント" name="count" value="{{ $user->count }}">
             </div>
           </div>
+          <div class="form-group">
+            <label>申請カウント(必須)</label>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="askカウント" name="ask_count" value="{{ $user->ask_count }}">
+            </div>
+          </div>
           <div class=" form-group">
             <label>{{ __('パスワード') }}</label>
             <div class="form-group">
