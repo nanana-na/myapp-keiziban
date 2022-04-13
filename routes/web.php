@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return redirect()->route('frees.index');
+    return redirect()->route('posts.index');
 });
 Route::get('introduction', function () {
     return view('introduction');
