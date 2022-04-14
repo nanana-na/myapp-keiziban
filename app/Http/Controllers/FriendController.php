@@ -35,7 +35,7 @@ class FriendController extends Controller
         $time = $now->format('H:i:00');
         $today = Carbon::today();
         $friends = Friend::all()->sortBy('enjoy_time');
-        $friends = $friends->where('enjoy_day', '=', $today)->where('enjoy_time', '>', $time);
+        $friends = $friends->where('enjoy_day', '=', $today)->where('enjoy_time', '>', $time)->where('state', '0');
         $friends->day = $today;
         $friends->day_name = "今日";
         $friends->load('user');
@@ -60,7 +60,7 @@ class FriendController extends Controller
             $day_name = "明後日";
         }
         $friends = Friend::all()->sortBy('enjoy_time');
-        $friends = $friends->where('enjoy_day', '=', $today);
+        $friends = $friends->where('enjoy_day', '=', $today)->where('state', '0');
         $friends->day = $today;
         $friends->day_name = $day_name;
         $friends->load('user');
@@ -190,17 +190,20 @@ class FriendController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(FriendRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $user_id = Auth::id();
         $friend = Friend::find($id);
         if (Auth::id() !== $friend->user_id) {
             return redirect('/error');
         }
-        $friend->body  = $request->body;
-        $image_path = $request->file('image')->store('public/images/friend/');
+        $friend->load('asks');
+        $evaluation = $friend->asks->where('evaluation', '2')->first();
+        if ($evaluation == NULL) {
+            return redirect()->route('friends.show', $request->id)->with('flash_message', 'メンバーがいません');
+        }
+        $friend->state  = 1;
         $friend->save();
-        return view('friends.show', compact('friend', 'user_id'));
+        return redirect()->route('friends.show', $request->id);
     }
 
     /**

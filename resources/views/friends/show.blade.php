@@ -1,17 +1,21 @@
 @extends('layouts.app')
 @section('content')
-
+@if (session('flash_message'))
+<div class="alert alert-danger">
+  {{ session('flash_message') }}
+</div>
+@endif
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8 mb-3" style="max-width: 700px;">
       <div class="pb-2 bg-white">
         <div class="friend-show">
           @if ($user_id == $friend->user_id)
-          <div class="text-center">
+          <div style="position: relative;">
             <form style="display: inline-block;" method="POST" action="{{ route('friends.destroy', $friend->id) }}">
               {{ csrf_field() }}
               {{ method_field('DELETE') }}
-              <button class="btn btn-clean" style="position: absolute; right:30px; color:#a3a3a3;" onclick='return confirm("本当に削除しますか？");'><i class="bi bi-trash" style="color:red"></i></button>
+              <button class="btn btn-clean" style="position: absolute; top:0; right:30px; color:#a3a3a3;" onclick='return confirm("本当に削除しますか？");'><i class="bi bi-trash" style="color:red"></i></button>
             </form>
           </div>
           @endif
@@ -30,6 +34,18 @@
             @endforeach
           </div>
         </div>
+        @if ($user_id == $friend->user_id)
+        @if($friend->state == 0)
+        <form style="text-align: center;" action="{{ route('friends.update', $friend->id) }}" enctype="multipart/form-data" method="POST">
+          {{csrf_field()}}
+          {{method_field('PATCH')}}
+          <input type="hidden" name="id" value="{{$friend->id}}">
+          <button class="btn btn-hai" style="font-size:8px; color:#707070; margin-top:5px;" onclick='return confirm("本当に締め切りますか？");'>締め切る</button>
+        </form>
+        @else
+        <p style="font-size: 8px;text-align:center;margin:5px 0 0 0;">締切中</p>
+        @endif
+        @endif
       </div>
     </div>
   </div>
