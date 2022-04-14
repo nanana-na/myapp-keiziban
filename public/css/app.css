@@ -11516,13 +11516,6 @@ footer {
   z-index: 1;
 }
 
-.comment-box.fix {
-  position: fixed;
-  position: -webkit-fixed;
-  right: 0;
-  top: 0px;
-}
-
 .send-btn {
   height: 38px;
   width: 50px;
@@ -11651,9 +11644,15 @@ footer {
 }
 
 @media (max-width: 800px) {
+  .comment-box.fix {
+    position: fixed;
+    position: -webkit-fixed;
+    right: 0;
+    top: 0px;
+  }
+
   .comment-box:focus-within {
     position: relative;
-    margin-top: 20px;
   }
 
   .comment-ul {

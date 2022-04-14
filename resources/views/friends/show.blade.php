@@ -42,7 +42,7 @@
   @endif
 </div>
 @if (null!==$user_id)
-<div style="height: 56px;">
+<div style="min-height: 56px;">
   <div class="comment" style="min-height: 100px;">
     <div class="comment-box w-100">
       <form action="{{ route('friendmessages.store') }}" method="POST">
@@ -85,7 +85,7 @@
               </li>
             </ul>
           </div>
-          <p style="text-align: right; margin-right:15px;">{{ $friendmessage->body }}</p>
+          <p style="text-align: right; margin-right:15px; white-space: pre-wrap">{{ $friendmessage->body }}</p>
         </article>
         @else
         <article>

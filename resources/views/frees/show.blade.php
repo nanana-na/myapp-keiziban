@@ -20,8 +20,8 @@
       <button class="btn btn-danger" onclick='return confirm("削除しますか？");'>削除する</button>
     </form>
   </div>
+  @endif
 </div>
-@endif
 @if ($errors->any())
 <div class="alert alert-danger mt-4">
   @foreach ($errors->all() as $error)
@@ -30,7 +30,7 @@
 </div>
 @endif
 @if (null!==$user_id)
-<div style="height: 50px;">
+<div style="min-height: 50px;">
   <div class="comment-box w-100">
     <form action="{{ route('comments.store') }}" method="POST">
       @csrf
@@ -55,30 +55,35 @@
 @endif
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-8" style="max-width: 700px;">
+    <div class="col-md-8" style="max-width: 650px;">
       <div class="comment">
         @foreach ($free->comments as $comment)
-        <article>
-          <div class="info">
-            <ul>
-              <li class="mr-auto">
-                <h6>{{ $comment->user->name }}</h6>
-              </li>
-              <li><time class="mr-0">
-                  <p>{{ $comment->created_at->format("n月j日 G:i") }}</p>
-                </time>
-              </li>
-            </ul>
-          </div>
-          <p style="white-space: pre-wrap">{{ $comment->body }}</p>
-        </article>
-        @endforeach
+        @if($comment->user_id == $user_id)
+        <article style="background-color: #dceeff;">
+          @else
+          <article>
+            @endif
+            <div class="info">
+              <ul>
+                <li class="mr-auto">
+                  <h6>{{ $comment->user->name }}</h6>
+                </li>
+                <li><time class="mr-0">
+                    <p>{{ $comment->created_at->format("n月j日 G:i") }}</p>
+                  </time>
+                </li>
+              </ul>
+            </div>
+            <p style="white-space: pre-wrap">{{ $comment->body }}</p>
+          </article>
+          @endforeach
 
-        <div class="mb-4 text-center" style="margin-top:10px">
-          <a href=" {{ route('frees.index') }}" class="btn btn-gradient">戻る</a>
-        </div>
+          <div class="mb-4 text-center" style="margin-top:10px">
+            <a href=" {{ route('frees.index') }}" class="btn btn-gradient">戻る</a>
+          </div>
       </div>
     </div>
   </div>
+</div>
 
-  @endsection
+@endsection
