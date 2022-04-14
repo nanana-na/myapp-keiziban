@@ -62,6 +62,14 @@
                                 @enderror
                             </div>
                         </div>
+                        <p style="font-size: 12px;margin-bottom:0;">※学籍番号が確認できればいいです</p>
+                        <p style="font-size: 12px;margin-bottom:0;">例：</p>
+                        <div style="text-align: center;">
+                            <img style="margin: 5px 0 25px 5px;" src="/images/number.jpg" alt="" width="200px"><br>
+                        </div>
+                        <a href="/rule">利用規約</a><br>
+                        <label for="agree"> 利用規約に同意します
+                            <input type="checkbox" name="agree_privacy" id="agree" required="required" /></label>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
