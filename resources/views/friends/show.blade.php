@@ -42,7 +42,7 @@
   @endif
 </div>
 @if (null!==$user_id)
-<div style="min-height: 56px;">
+<div style="height: 56px;">
   <div class="comment" style="min-height: 100px;">
     <div class="comment-box w-100">
       <form action="{{ route('friendmessages.store') }}" method="POST">

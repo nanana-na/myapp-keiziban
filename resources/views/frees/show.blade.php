@@ -30,7 +30,7 @@
 </div>
 @endif
 @if (null!==$user_id)
-<div style="min-height: 60px;">
+<div style="height: 50px;">
   <div class="comment-box w-100">
     <form action="{{ route('comments.store') }}" method="POST">
       @csrf
