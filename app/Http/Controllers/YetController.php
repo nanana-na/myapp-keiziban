@@ -61,7 +61,7 @@ class YetController extends Controller
             return view('/error');
         }
         $yet->save();
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->with('flash_message', '認証されるまでしばらくお待ちください。');;
     }
 
     /**
