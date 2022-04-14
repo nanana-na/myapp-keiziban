@@ -11,5 +11,8 @@
   <img style="margin: 5px 0 25px 5px;" src="/images/iphone2.jpg" alt="" height="400px"><br>
   <hr>
   <h4>完了！</h4>
+  <div class="mb-4 text-center" style="margin-top:10px">
+    <a href="/etc" class="btn btn--yellow">戻る</a>
+  </div>
 </div>
 @endsection
