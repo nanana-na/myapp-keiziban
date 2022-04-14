@@ -178,6 +178,7 @@ class UserController extends Controller
             return redirect()->route('posts.index',)->with('flash_message', '名前は1日2回までしか変えられません');
         }
         if ($request->file('image')) {
+            Storage::delete('public/images/user/' . $user->image_path);
             $image_path = $request->file('image')->store('public/images/user/');
             $user->image_path = basename($image_path);
             $user->save();
