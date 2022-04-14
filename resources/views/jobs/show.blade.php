@@ -50,7 +50,7 @@
     </div>
   </div>
 </div>
-<div class="mb-4 text-center" style="margin-top:10px">
+<div class="mb-4 mt-3 text-center" style="margin-top:10px">
   <a href=" {{ route('jobs.index') }}" class="btn btn-gradient">戻る</a>
 </div>
 @if ($user_id == $job->user_id)

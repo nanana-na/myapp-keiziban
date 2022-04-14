@@ -43,21 +43,23 @@
 </div>
 @if (null!==$user_id)
 <div style="min-height: 56px;">
-  <div class="comment-box w-100">
-    <form action="{{ route('friendmessages.store') }}" method="POST">
-      @csrf
-      <ul class="comment-ul">
-        <li>
-          <input type="hidden" name="friend_id" value="{{ $friend->id }}">
-          <div class="form-group">
-            <textarea class="form-control" placeholder="内容" cols="40" rows="1" name="body"></textarea>
-          </div>
-        </li>
-        <li>
-          <button type="submit" class="btn btn-primary send-btn"><i class="bi bi-send"></i></button>
-        </li>
-      </ul>
-    </form>
+  <div class="comment" style="min-height: 100px;">
+    <div class="comment-box w-100">
+      <form action="{{ route('friendmessages.store') }}" method="POST">
+        @csrf
+        <ul class="comment-ul">
+          <li>
+            <input type="hidden" name="friend_id" value="{{ $friend->id }}">
+            <div class="form-group">
+              <textarea class="form-control" placeholder="内容" cols="40" rows="1" name="body"></textarea>
+            </div>
+          </li>
+          <li>
+            <button type="submit" class="btn btn-primary send-btn"><i class="bi bi-send"></i></button>
+          </li>
+        </ul>
+      </form>
+    </div>
   </div>
 </div>
 @else
