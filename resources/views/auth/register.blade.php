@@ -10,7 +10,6 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('yets.store') }}" enctype="multipart/form-data">
                         @csrf
-
                         <div class=" form-group row">
                             <label for="number" class="col-md-4 col-form-label text-md-right">{{ __('学籍番号') }}</label>
 
@@ -51,7 +50,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="number" class="col-md-4 col-form-label text-md-right">{{ __('学生証') }}</label>
+                            <label for="number" class="col-md-4 col-form-label text-md-right">{{ __('学生証(jpeg,png)') }}</label>
 
                             <div class="col-md-6">
                                 <input id="image" type="file" class="@error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" required autocomplete="image">
@@ -62,14 +61,10 @@
                                 @enderror
                             </div>
                         </div>
-                        <p style="font-size: 12px;margin-bottom:0;">※学籍番号が確認できればいいです</p>
-                        <p style="font-size: 12px;margin-bottom:0;">例：</p>
+                        <p style="font-size: 12px;margin:20px 0 0 0;">※学籍番号が確認できればいいです</p>
                         <div style="text-align: center;">
                             <img style="margin: 5px 0 25px 5px;" src="/images/number.jpg" alt="" width="200px"><br>
                         </div>
-                        <a href="/rule">利用規約</a><br>
-                        <label for="agree"> 利用規約に同意します
-                            <input type="checkbox" name="agree_privacy" id="agree" required="required" /></label>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

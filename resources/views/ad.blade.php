@@ -8,7 +8,7 @@
   <h2>1000円/4週間</h2>
   <p>契約期間中はご連絡いただければ、掲載内容の変更、掲載の削除、再掲載は何度でもできます</p>
   <p>※掲載期間は掲載が最初に完了してからの期間です.</p>
-  <p>※就活に役に立てたいので写真を撮らせて頂くかもしれません.</p>
+  <p>※就職活動の役に立てたいと考えているので写真を撮らせて頂くかもしれません.</p>
   <h3 class="h3-blue">購入方法</h3>
   <p>
     <a class="text-info" href="https://twitter.com/sadaikeiziban?ref_src=twsrc%5Etfw" target=" _blank">Twitter</a>、<a class="text-info" href="https://www.instagram.com/sadaikeiziban/" target=" _blank">Instagram</a>等でご連絡いただければこちらから向かいます。その際、[ご都合の良い日時][場所][駐車場の有無]などお伺いします.<br>
