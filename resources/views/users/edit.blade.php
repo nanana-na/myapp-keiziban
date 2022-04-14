@@ -22,7 +22,7 @@
           </div>
           <button type="submit" class="btn btn-primary">更新する</button>
         </form>
-
+        <div style="margin-top: 200px;"></div>
 
         <form action="{{ route('users.update', $user->id) }}" enctype="multipart/form-data" method="POST">
           {{csrf_field()}}
