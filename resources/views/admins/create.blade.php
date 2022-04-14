@@ -14,7 +14,7 @@
       <form action=" {{ route('admins.store') }}" method="POST" enctype="multipart/form-data">
         {{csrf_field()}}
         <div class="form-group">
-          <label>学籍番号(必須)</label>
+          <label>学籍番号(必須)1000,24000000</label>
           <div class="form-group">
             <input type="text" class="form-control" placeholder="学籍番号" name="number" value="{{ old('number') }}">
           </div>

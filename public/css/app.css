@@ -11458,6 +11458,14 @@ footer {
   width: 1.8em;
 }
 
+.box {
+  background-image: url("../icon/box.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.85em;
+  width: 1.8em;
+}
+
 .skiing {
   background-image: url("../icon/skiing.svg");
   background-repeat: no-repeat;
