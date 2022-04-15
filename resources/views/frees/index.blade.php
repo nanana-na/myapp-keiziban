@@ -25,20 +25,6 @@
       @endforeach
     </div>
   </div>
-  <!-- <div class=" card-deck">
-                @foreach ($frees as $free)
-                <div class="col-md-6">
-                  <a href="{{ route('frees.show', $free->id) }}">
-                    <div class="card border-dark m-1" style="min-width: 18rem;">
-                      <div class="card-body-s">
-                        <h4 class="card-title"><span>{{ $free->title }}</span></h4>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                @endforeach -->
-</div>
-</div>
 </div>
 
 @endsection

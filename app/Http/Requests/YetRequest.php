@@ -24,7 +24,7 @@ class YetRequest extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'required|file|max:1600|mimes:jpeg,png', 'number' => 'required|integer|unique:users|between:16000000,22000000', 'password' => 'required|confirmed|max:30', 'password_confirmation' => 'required',
+            'image' => 'required|file|max:1600|mimes:jpeg,png', 'number' => 'required|integer|unique:users|unique:yets|between:16000000,22000000', 'password' => 'required|confirmed|max:30', 'password_confirmation' => 'required',
         ];
     }
     public function messages()

@@ -35,6 +35,7 @@
           </div>
         </div>
         @if ($user_id == $friend->user_id)
+        @if (count($asks) > 0)
         @if($friend->state == 0)
         <form style="text-align: center;" action="{{ route('friends.update', $friend->id) }}" enctype="multipart/form-data" method="POST">
           {{csrf_field()}}
@@ -44,6 +45,7 @@
         </form>
         @else
         <p style="font-size: 8px;text-align:center;margin:5px 0 0 0;">締切中</p>
+        @endif
         @endif
         @endif
       </div>

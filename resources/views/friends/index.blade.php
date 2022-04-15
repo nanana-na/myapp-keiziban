@@ -23,7 +23,7 @@
       <div class="friend">
         <div class="friend-user">
           <div class="friend-image">
-            <img src="{{ asset('storage/images/user/'.$friend->user->image_path)}}" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" class="friendimage d-block" style="object-fit: cover;user-select: none;" alt="">
+            <img src="{{ asset('storage/images/user/'.$friend->user->image_path)}}" class="friendimage d-block" style="object-fit: cover;user-select: none;" alt="" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;">
           </div>
           <div class="friend-name">
             <p>{{ $friend->user->name }}</p>
