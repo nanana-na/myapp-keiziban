@@ -25,7 +25,7 @@ class FreeController extends Controller
     public function index()
     {
         $frees = new Free;
-        $frees = Free::all()->sortBy("number");
+        $frees = Free::all()->sortBy('number');
         $frees->load('user');
         $frees->load('comments');
         return view('frees.index', compact('frees'));
@@ -108,6 +108,7 @@ class FreeController extends Controller
             return abort(404);
         }
         $free->title  = $request->title;
+        $free->number  = $request->number;
         $free->save();
         return view('frees.show', compact('free', 'user_id'));
     }
