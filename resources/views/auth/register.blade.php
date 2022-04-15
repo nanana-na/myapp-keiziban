@@ -63,7 +63,7 @@
                         </div>
                         <p style="font-size: 12px;margin:20px 0 0 0;">※学籍番号が確認できればいいです</p>
                         <div style="text-align: center;">
-                            <img style="margin: 5px 0 25px 5px;" src="/images/number1.jpg" alt="" width="200px"><br>
+                            <img style="margin: 5px 0 25px 5px;" src="/images/number2.jpg" alt="" width="200px"><br>
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
