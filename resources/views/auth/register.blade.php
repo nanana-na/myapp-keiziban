@@ -78,6 +78,9 @@
                     </div>
                 </div>
             </div>
+            <div style="margin: 5px;">
+                <p>※対面で登録したい場合はTwitterかInstagramからご連絡ください。都合があえば対面で登録もできます。その際は学生証を持って来て下さい。<br>※画像は登録と同時に削除しています</p>
+            </div>
         </div>
     </div>
 </div>
