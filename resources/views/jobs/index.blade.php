@@ -28,7 +28,9 @@
       @endforeach
     </div>
   </div>
-  <h4 class="job-ask">バイト先にご紹介お願いします！</h4>
+  <div style="justify-content: center;">
+    <span class="job-ask">バイト先にご紹介お願いします！</span>;
+  </div>
 </div>
 
 @endsection
