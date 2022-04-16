@@ -61,7 +61,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <p style="font-size: 12px;margin:20px 0 0 0;">※学籍番号が確認できればいいです</p>
+                        <p style="font-size: 12px;margin:20px 0 0 0;">※学籍番号が確認できればいいです<br>※対面でも可</p>
                         <div style="text-align: center;">
                             <img style="margin: 5px 0 25px 5px;" src="/images/number2.jpg" alt="" width="200px"><br>
                         </div>
