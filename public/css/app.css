@@ -11781,6 +11781,7 @@ footer {
   background-color: #ff5050;
   border-radius: 5px;
   top: 100px;
+  justify-content: center;
 }
 
 @media (max-width: 374px) {
