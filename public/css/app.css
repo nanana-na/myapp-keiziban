@@ -11773,6 +11773,16 @@ footer {
   margin-bottom: 0;
 }
 
+.job-ask {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  position: relative;
+  color: #fff;
+  background-color: #ff5050;
+  border-radius: 5px;
+  top: 100px;
+}
+
 @media (max-width: 374px) {
   .navbar-brand {
     font-size: 22px;

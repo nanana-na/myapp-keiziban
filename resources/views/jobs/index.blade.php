@@ -27,6 +27,7 @@
       </div>
       @endforeach
     </div>
+    <h4 class="job-ask">バイト先にご紹介お願いします！</h4>
   </div>
 </div>
 
