@@ -11475,6 +11475,14 @@ footer {
   width: 1.8em;
 }
 
+.ballon {
+  background-image: url("../icon/balloon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.85em;
+  width: 1.8em;
+}
+
 .comment article {
   margin-top: 8px;
   padding: 5px;

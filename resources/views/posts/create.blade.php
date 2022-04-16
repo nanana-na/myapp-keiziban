@@ -28,7 +28,7 @@
         </div>
         <div class="form-group">
           <label>アイコン</label>
-          <p>badminton succer basketball music run tennis skiing box</p>
+          <p>badminton succer basketball music run tennis skiing box balloon</p>
           <div class="form-group">
             <input type="text" class="form-control" placeholder="アイコン" name="icon" value="{{ old('icon') }}">
           </div>

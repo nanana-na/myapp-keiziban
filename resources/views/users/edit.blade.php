@@ -22,7 +22,7 @@
             <img src="{{ asset('storage/images/user/'.$user->image_path)}}" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" class="friendimage d-block" style="object-fit: cover;user-select: none; height:50px;width:50px; margin-bottom:30px;border-radius: 8px;" alt="">
             <input type="file" class="form-control-file" id="image" name="image">
           </div>
-          <button type="submit" class="btn btn-primary">更新する</button>
+          <button type="submit" class="btn btn-primary">画像を更新</button>
         </form>
         <div style="margin-top: 50px;"></div>
 
@@ -33,7 +33,7 @@
             <label>名前</label>
             <input type="text" class="form-control" value="{{ $user->name }}" name="name">
           </div>
-          <button type="submit" class="btn btn-primary">更新する</button>
+          <button type="submit" class="btn btn-primary">名前を更新</button>
         </form>
       </div>
     </div>
