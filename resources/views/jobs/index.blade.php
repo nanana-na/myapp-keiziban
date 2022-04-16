@@ -29,7 +29,7 @@
     </div>
   </div>
   <div style="justify-content: center;">
-    <span class="job-ask">バイト先にご紹介お願いします！</span>;
+    <h2><span class="job-ask">バイト先にご紹介お願いします！</span></h2>
   </div>
 </div>
 
