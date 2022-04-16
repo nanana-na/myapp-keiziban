@@ -28,8 +28,8 @@
       @endforeach
     </div>
   </div>
-  <div style="justify-content: center;">
-    <h2><span class="job-ask">バイト先にご紹介お願いします！</span></h2>
+  <div style="justify-content: center;margin-top:30px;">
+    <h2 class="job-ask"><span>バイト先にご紹介お願いします！</span></h2>
   </div>
 </div>
 
