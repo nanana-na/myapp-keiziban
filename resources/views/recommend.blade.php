@@ -12,7 +12,7 @@
   <hr>
   <h4>完了！</h4>
   <div class="mb-4 text-center" style="margin-top:10px">
-    <a href="/etc" class="btn btn--yellow">戻る</a>
+    <a href="/etc" class="btn btn-gradient">戻る</a>
   </div>
 </div>
 @endsection
