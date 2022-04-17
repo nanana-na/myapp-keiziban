@@ -19,7 +19,7 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'file|max:1600|mimes:jpeg,png,jpeg', 'group' => 'required|max:20', 'place' => 'max:30', 'date' => 'max:30', 'body'  => 'max:100', 'number' => 'exists:users,number', 'icon'
+            'image' => 'file|max:1600|mimes:jpeg,png,jpeg', 'group' => 'required|max:20', 'place' => 'max:30', 'date' => 'max:30', 'body'  => 'max:200', 'number' => 'exists:users,number', 'icon'
         ];
     }
     public function messages()

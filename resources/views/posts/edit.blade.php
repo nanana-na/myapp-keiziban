@@ -16,7 +16,7 @@
         {{csrf_field()}}
         {{method_field('PATCH')}}
         <div class="form-group">
-          <label for="image">画像</label>
+          <label for="image">画像(1.6MB以下)</label>
           <input type="file" class="form-control-file" id="image" name="image">
         </div>
         <div class="form-group">
@@ -36,7 +36,7 @@
           <textarea class="form-control" rows="3" name="time">{{ $post->time }}</textarea>
         </div>
         <div class="form-group">
-          <label>内容</label>
+          <label>内容(200字以下)</label>
           <textarea class="form-control" rows="5" name="body">{{ $post->body }}</textarea>
         </div>
 
