@@ -48,7 +48,8 @@ class AdminController extends Controller
         if ($user_number !== '20238297') {
             return  redirect('/error');
         }
-        return view('admins.create');
+        $pas = Str::random(5);
+        return view('admins.create', compact('pas'));
     }
 
     /**
