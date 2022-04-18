@@ -63,7 +63,11 @@
                         </div>
                         <p style="font-size: 12px;margin:20px 0 0 0;">※学籍番号が確認できればいいです<br>※対面でも可</p>
                         <div style="text-align: center;">
-                            <img style="margin: 5px 0 25px 5px;" src="/images/number2.jpg" alt="" width="200px"><br>
+                            <img style="margin: 5px 0 25px 5px;" src="/images/number3.jpg" alt="" width="200px"><br>
+                        </div>
+                        <div class="register">
+                            <p><span><input type="checkbox" value="" required style="height: 18px;width:18px;"><a href="/rule">利用規約</a>に同意する</span>
+                            </p>
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

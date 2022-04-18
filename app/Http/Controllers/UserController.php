@@ -24,16 +24,6 @@ class UserController extends Controller
      */
     public function index()
     {
-
-        if (!isset(Auth::user()->number)) {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
-        $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
-            return  redirect('/error');
-        }
-        $users = User::all();
-        return view('users.index', compact('users'));
     }
 
     /**
@@ -43,20 +33,6 @@ class UserController extends Controller
      */
     public function create()
     {
-        if (!isset(Auth::user()->number)) {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
-        $user = Auth::user()->number;
-        if ($user == '20238297') {
-            return view('users.create');
-        }
-
-        // if (Auth::check()) {
-        //     return view('jobs.create');
-        // }
-        else {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
     }
 
     /**
@@ -87,18 +63,6 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        if (!isset(Auth::user()->number)) {
-            return redirect('/error')->with('flash_message', 'エラーが出ました');
-        }
-        $user_number = Auth::user()->number;
-        if ($user_number !== '20238297') {
-            return  redirect('/error');
-        }
-        $user = User::find($id);
-        if (empty($user->image_path)) {
-            $user->image_path = "no_image.jpg";
-        }
-        return view('users.show', compact('user'));
     }
 
     /**

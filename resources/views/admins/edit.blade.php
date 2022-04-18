@@ -34,7 +34,7 @@
             </div>
           </div>
           <div class=" form-group">
-            <label>{{ __('パスワード') }}</label>
+            <label>{{ __('パスワード') }} {{$user->pas}}</label>
             <div class="form-group">
               <input id="password" type="password" class="form-control" name="password">
               @error('password')

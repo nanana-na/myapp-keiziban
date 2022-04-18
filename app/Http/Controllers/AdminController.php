@@ -100,6 +100,7 @@ class AdminController extends Controller
             return  redirect('/error');
         }
         $user = User::find($id);
+        $user->pas = Str::random(5);
         return view('admins.edit', compact('user'));
     }
 

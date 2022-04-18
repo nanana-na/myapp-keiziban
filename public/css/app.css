@@ -11793,6 +11793,32 @@ footer {
   border-radius: 5px;
 }
 
+.register {
+  margin-bottom: 30px;
+}
+
+.register p {
+  text-align: center;
+}
+
+.register a {
+  margin-left: 30px;
+}
+
+.register span {
+  position: relative;
+}
+
+.register input {
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
 @media (max-width: 374px) {
   .navbar-brand {
     font-size: 22px;
