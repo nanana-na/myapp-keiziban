@@ -24,7 +24,7 @@ class AdminRequest extends FormRequest
     public function rules()
     {
         return [
-            'number' => 'required|integer|unique:users|unique:yets|between:1000,24000000', 'password' => 'required|confirmed|max:15', 'password_confirmation' => 'required', 'password_confirmation' => 'required', 'name' => 'required|unique:users|unique:yets',
+            'number' => 'required|unique:users|unique:yets|between:0,24000000', 'password' => 'required|confirmed|max:15', 'password_confirmation' => 'required', 'password_confirmation' => 'required', 'name' => 'required|unique:users|unique:yets',
         ];
     }
     public function messages()
