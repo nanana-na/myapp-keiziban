@@ -11,7 +11,7 @@
       </div>
       @endif
       <div>
-        <p>1日2回まで変更できます</p>
+        <p>1日5回まで変更できます</p>
         <form action="/updateimage" enctype="multipart/form-data" method="POST">
           {{csrf_field()}}
           {{method_field('POST')}}

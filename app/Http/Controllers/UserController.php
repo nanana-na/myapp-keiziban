@@ -111,8 +111,8 @@ class UserController extends Controller
         } else {
             $user->count = 0;
         }
-        if ($user->count > 1) {
-            return redirect()->route('posts.index',)->with('flash_message', '名前は1日2回までしか変えられません');
+        if ($user->count > 4) {
+            return redirect()->route('posts.index',)->with('flash_message', '名前、画像は1日5回までしか変えられません');
         }
         $user->name = $request->name;
         $user->save();
@@ -138,8 +138,8 @@ class UserController extends Controller
         } else {
             $user->count = 0;
         }
-        if ($user->count > 2) {
-            return redirect()->route('posts.index',)->with('flash_message', '名前は1日2回までしか変えられません');
+        if ($user->count > 4) {
+            return redirect()->route('posts.index',)->with('flash_message', '名前、画像は1日5回までしか変えられません');
         }
         if ($request->file('image')) {
             Storage::delete('public/images/user/' . $user->image_path);
