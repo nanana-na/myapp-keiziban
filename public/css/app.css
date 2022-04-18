@@ -11794,7 +11794,7 @@ footer {
 }
 
 .register {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .register p {
@@ -11803,6 +11803,7 @@ footer {
 
 .register a {
   margin-left: 30px;
+  text-decoration: underline;
 }
 
 .register span {
