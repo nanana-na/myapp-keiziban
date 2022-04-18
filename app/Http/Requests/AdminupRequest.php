@@ -24,7 +24,7 @@ class AdminupRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:users|unique:yets|min:2|max:12', 'password' => 'confirmed|max:15', 'password_confirmation',
+            'name' => 'required|unique:yets|min:2|max:12', 'password' => 'confirmed|max:15', 'password_confirmation',
         ];
     }
     public function messages()
