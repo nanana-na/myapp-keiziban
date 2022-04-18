@@ -24,7 +24,7 @@ class YetRequest extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'required|file|max:1600|mimes:jpeg,png', 'number' => 'required|integer|unique:users|unique:yets|between:16000000,22000000', 'password' => 'required|min:8|confirmed|max:30', 'password_confirmation' => 'required',
+            'image' => 'required|file|max:2000|mimes:jpeg,png', 'number' => 'required|integer|unique:users|unique:yets|between:16000000,22000000', 'password' => 'required|min:8|confirmed|max:30', 'password_confirmation' => 'required',
         ];
     }
     public function messages()
@@ -39,7 +39,7 @@ class YetRequest extends FormRequest
             'password.min' => 'パスワードは8文字以上にしてください',
             'password.max' => 'パスワードは30文字以内にしてください',
             'password_confirmation' => 'パスワードは必須です',
-            'image.max' => '1.6MBを超えるファイルは添付できません。',
+            'image.max' => '2MBを超えるファイルは添付できません。',
             'image.mimes' => '指定のファイル形式以外は添付できません。',
         ];
     }
