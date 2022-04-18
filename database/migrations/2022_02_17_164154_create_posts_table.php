@@ -23,7 +23,7 @@ class CreatePostsTable extends Migration
             $table->string('icon');
             $table->text('time')->nullable();
             $table->text('body')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

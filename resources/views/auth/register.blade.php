@@ -84,7 +84,7 @@
             </div>
             <div style="margin: 5px;">
                 <p>※万が一に備えパスワードの使いまわしはせず、登録後に個人情報が含まれる情報は送信しないでください。</p>
-                <p>※対面で登録したい場合は<a href="https://www.instagram.com/sadaikeiziban/" target=" _blank">Instagram</a>か <a href="https://twitter.com/sadaikeiziban?ref_src=twsrc%5Etfw" target=" _blank">Twitter</a>からご連絡ください。都合があえば対面でも登録できます。その際は学生証を持って来て下さい。<br>※画像は登録と同時に削除しています</p>
+                <p>※対面で登録したい場合は<a href="https://www.instagram.com/sadaikeiziban/" target=" _blank">Instagram</a>からご連絡ください。都合があえば対面でも登録できます。その際は学生証を持って来て下さい。<br>※画像は登録と同時に削除しています</p>
                 <p>画像はトリミング以外の修正をしないでください。画質が悪くても登録できない場合があります。</p>
             </div>
         </div>
