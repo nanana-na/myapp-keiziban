@@ -19,6 +19,11 @@ class UsersTableSeeder extends Seeder
             'password' => '$2y$10$.nFpGZITnrSCOgiySsPswuFd9FIr8s6YJ3AvRjCDmaghqSlkel1YC'
         ]);
         User::create([
+            'name' => 'nakao1',
+            'number' => '20238296',
+            'password' => '$2y$10$.nFpGZITnrSCOgiySsPswuFd9FIr8s6YJ3AvRjCDmaghqSlkel1YC'
+        ]);
+        User::create([
             'name' => '佐賀大学バトミントン部',
             'number' => '0001',
             'password' => '$2y$10$.nFpGZITnrSCOgiySsPswuFd9FIr8s6YJ3AvRjCDmaghqSlkel1YC'

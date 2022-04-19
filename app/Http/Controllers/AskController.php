@@ -122,6 +122,11 @@ class AskController extends Controller
         if (Auth::id() !== $ask->user_id) {
             return view('/error');
         }
+        $user = User::find($ask->ask_id);
+        if ($request->evaluation == 2) {
+            $user->chat_alert += 1;
+            $user->save();
+        }
         $ask->evaluation = $request->evaluation;
         $ask->save();
         return redirect()->route('asks.index');

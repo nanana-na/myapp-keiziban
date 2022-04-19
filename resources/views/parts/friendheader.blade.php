@@ -23,7 +23,11 @@
   <div class="friend-header">
     <a href="/List" class="btn btn-hai"><span>My
       </span><i class="bi bi-clipboard-check"></i></a>
-    <a href="/askList" class="btn btn-hai"><span>Chat</span><i class="bi bi-chat-left-dots"></i></a>
+    <a href="/askList" class="btn btn-hai"><span>Chat</span><i class="bi bi-chat-left-dots
+        @if ($user->chat_alert > 0)
+        pop
+        @endif
+    "></i></a>
     <a href="{{route('asks.index')}}" class="btn btn-hai"><span>Ask</span><i class="bi bi-envelope-plus
         @if ($user->ask_alert > 0)
         pop

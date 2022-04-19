@@ -80,6 +80,8 @@ class FriendController extends Controller
     {
         $user_id  = Auth::id();
         $user = User::find($user_id);
+        $user->chat_alert = 0;
+        $user->save();
         $asks = new Ask;
         $asks = Ask::where('ask_id', $user_id)->get();
         $asks = $asks->where('evaluation', '>', 1)->sortBy('evaluation');
