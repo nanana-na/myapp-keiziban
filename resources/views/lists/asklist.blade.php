@@ -33,9 +33,13 @@
             <p>{{ $ask->friend->body }}</p>
           </div>
           <div class="friend-ask">
+            @if($ask->evaluation==2)
             <div>
               <a class="btn btn-blue" style="padding: 3px 18px;" href="{{ route('friends.show', $ask->friend->id) }}">Chat</a>
             </div>
+            @else
+            <p class="btn btn-light">また今度</p>
+            @endif
           </div>
         </div>
     </article>
