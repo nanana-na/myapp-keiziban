@@ -118,7 +118,7 @@
               </li>
             </ul>
           </div>
-          <p style="margin-left: 15px;">{{ $friendmessage->body }}</p>
+          <p style="margin-left: 15px; white-space: pre-wrap">{{ $friendmessage->body }}</p>
         </article>
         @endif
         @endforeach
