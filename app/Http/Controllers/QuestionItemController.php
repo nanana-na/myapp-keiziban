@@ -74,7 +74,15 @@ class QuestionItemController extends Controller
      */
     public function edit($id)
     {
-        //
+        $question_item = QuestionItem::find($id);
+        if (!isset(Auth::user()->number)) {
+            return redirect('/error')->with('flash_message', 'エラーが出ました');
+        }
+        $user_number = Auth::user()->number;
+        if ($user_number !== '20238297') {
+            return  redirect('/error');
+        }
+        return view('questionitems.edit', compact('question_item'));
     }
 
     /**
@@ -86,7 +94,18 @@ class QuestionItemController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user_id = Auth::id();
+        $question_item = QuestionItem::find($id);
+        if (!isset(Auth::user()->number)) {
+            return redirect('/error')->with('flash_message', 'エラーが出ました');
+        }
+        $user_number = Auth::user()->number;
+        if ($user_number !== '20238297') {
+            return  redirect('/error');
+        }
+        $question_item->option  = $request->option;
+        $question_item->save();
+        return redirect()->route('questions.index');
     }
 
     /**

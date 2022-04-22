@@ -56,6 +56,11 @@
               @endif
             </ul>
           </div>
+          @if (isset(Auth::user()->number))
+          @if(Auth::user()->number == 20238297)
+          <a href="{{ route('questionitems.edit', $question_item->id) }}">修正</a>
+          @endif
+          @endif
           @endforeach
         </div>
         <div class="question-time">
@@ -82,16 +87,20 @@
           {{ method_field('DELETE') }}
           <button class="btn btn-small" onclick='return confirm("削除しますか？");'>削除する</button>
         </form>
+        <a href="{{ route('questions.edit', $question->id) }}">修正する</a>
         @endif
         @endif
       </div>
       @endforeach
     </div>
-    @if($user_id !== NULL)
-    @if(Auth::user()->number == '20238297')
+    @if (isset(Auth::user()->number))
+    @if(Auth::user()->number == 20238297)
     <a href="/questions/create">作成</a>
     @endif
     @endif
+    <div class="bottom-item">
+      <p>※追加してほしい項目がある場合は、<br><a href="https://www.instagram.com/sadaikeiziban/" target=" _blank">Instagram</a>からご連絡ください！</p>
+    </div>
   </div>
 </div>
 @endsection

@@ -91,8 +91,12 @@ class QuestionController extends Controller
     public function edit($id)
     {
         $question = Question::find($id);
-        if (Auth::id() !== $question->user_id) {
-            return redirect()->route('questions.index');
+        if (!isset(Auth::user()->number)) {
+            return redirect('/error')->with('flash_message', 'エラーが出ました');
+        }
+        $user_number = Auth::user()->number;
+        if ($user_number !== '20238297') {
+            return  redirect('/error');
         }
         return view('questions.edit', compact('question'));
     }
@@ -108,14 +112,19 @@ class QuestionController extends Controller
     {
         $user_id = Auth::id();
         $question = Question::find($id);
-        if ($user_id !== $question->user_id) {
-            return abort(404);
+        if (!isset(Auth::user()->number)) {
+            return redirect('/error')->with('flash_message', 'エラーが出ました');
+        }
+        $user_number = Auth::user()->number;
+        if ($user_number !== '20238297') {
+            return  redirect('/error');
         }
         $question->title  = $request->title;
-        $question->limit  = $request->limit;
-        $question->user_id  = Auth::id();
+        if ($request->limit !== NULL) {
+            $question->limit = $request->limit;
+        }
         $question->save();
-        return view('questions.show', compact('question', 'user_id'));
+        return redirect()->route('questions.index');
     }
 
     /**

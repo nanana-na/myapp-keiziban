@@ -11922,6 +11922,19 @@ footer {
   transform: scale(-1, 1);
 }
 
+.bottom-item {
+  position: relative;
+  text-align: center;
+}
+
+.bottom-item p {
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+  top: 100px;
+}
+
 .btn-small {
   background-color: #e0f0ff;
   padding: 5px 10px 3px 10px;

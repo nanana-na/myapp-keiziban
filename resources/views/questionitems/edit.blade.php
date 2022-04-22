@@ -12,17 +12,13 @@
         </ul>
       </div>
       @endif
-      <form action="{{ route('questions.update', $question->id) }}" enctype="multipart/form-data" method="POST">
+      <form action="{{ route('questionitems.update', $question_item->id) }}" enctype="multipart/form-data" method="POST">
         {{csrf_field()}}
         {{method_field('PATCH')}}
 
         <div class="form-group">
-          <label>質問</label>
-          <input type="text" class="form-control" value="{{ $question->title }}" name="title">
-        </div>
-        <div class="form-group">
-          <label>リミット</label>
-          <input type="text" class="form-control" value="{{ $question->limit }}" name="limit">
+          <label>項目</label>
+          <input type="text" class="form-control" value="{{ $question_item->option }}" name="option">
         </div>
 
         <button type="submit" class="btn btn-primary">更新する</button>
