@@ -11337,7 +11337,7 @@ footer {
   line-height: 1rem;
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 480px) {
   .header-hide {
     -webkit-transform: scale(0.7);
     -moz-transform: scale(0.7);
@@ -11401,6 +11401,14 @@ footer {
 
 .zen {
   font-family: 'Zen Antique Soft', serif;
+}
+
+.noto {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.noto-sans {
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .club-link:hover {
@@ -11481,6 +11489,14 @@ footer {
   background-size: contain;
   height: 1.85em;
   width: 1.8em;
+}
+
+.oukan {
+  background-image: url("../icon/oukan.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.55em;
+  width: 1.5em;
 }
 
 .comment article {
@@ -11818,6 +11834,97 @@ footer {
   bottom: 0;
   left: 0;
   margin: auto;
+}
+
+.question {
+  padding-top: 25px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question-group {
+  background-color: #f0dfff;
+  border-radius: 5px 5px 1px 1px;
+  padding: 5px 5px 1px 2px;
+}
+
+.question h4 {
+  text-align: center;
+  color: #545454;
+}
+
+.question-item {
+  margin-bottom: 6px;
+}
+
+.question-item ul {
+  justify-content: left;
+  min-height: 45px;
+}
+
+.top-one {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5px;
+  margin: auto;
+}
+
+.question-item-box {
+  padding: 15px 2px 5px;
+  background-color: white;
+  border-radius: 1px 1px 5px 5px;
+}
+
+.question-item li {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.question-item i {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.question-last {
+  margin-right: 5px;
+  min-width: 51px;
+}
+
+.question-count {
+  right: 36px;
+  top: 28px;
+  padding: 1px 0 0 0;
+  background-color: #f1f1f1;
+  border-radius: 11px;
+  color: #8f8f8f;
+  text-align: center;
+}
+
+.question-content {
+  margin-bottom: 55px;
+}
+
+.question-time {
+  color: #999;
+  font-size: 72%;
+  padding: 5px 5px 0px;
+  text-align: center;
+}
+
+.question-btn {
+  right: 0;
+}
+
+.hanten {
+  position: absolute;
+  transform: scale(-1, 1);
+}
+
+.btn-small {
+  background-color: #e0f0ff;
+  padding: 5px 10px 3px 10px;
 }
 
 @media (max-width: 374px) {

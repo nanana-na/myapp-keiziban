@@ -4,9 +4,9 @@
     <ul>
       <li style="padding-right:20px;"><a class="btn btn-hai" href="/posts"><i class="bi bi-grid"></i><br><span class="header-hide header-long" style="font-size: 8px;letter-spacing:0.1px">サークル</span></a></li>
       <li style="padding-right:20px;"><a class="btn btn-hai" href="/jobs"><i class="bi bi-cash-coin"></i><br><span class="header-hide" style="font-size: 8px;">バイト</span></a></li>
-      <li style="padding-right:20px;"><a class="btn btn-hai" href="/frees"><i class="bi bi-chat-right"></i><br><span class="header-hide" style="font-size: 8px;">チャット</span></a></li>
+      <li style="padding-right:20px;"><a class="btn btn-hai" style="min-width:53px;" href="/frees"><i class="bi bi-chat-right"></i><br><span class="header-hide" style="font-size: 8px;">チャット</span></a></li>
       <li style="padding-right:20px;"><a class="btn btn-hai" href="/friends"><i class="bi bi-mortarboard"></i><br><span class="header-hide" style="font-size: 8px;">交流</span></a></li>
-      <li><a class="btn btn-hai" href="/etc"><i class="bi bi-three-dots"></i><br><span class="header-hide" style="font-size: 8px;">その他</span></a></li>
+      <li><a class="btn btn-hai" style="min-width:53px;" href="/questions"><i class="bi bi-star"></i></i><br><span class="header-hide" style="font-size: 8px;margin: 0 -9px 0 -9px;">アンケート</span></a></li>
     </ul>
   </nav>
 </header>

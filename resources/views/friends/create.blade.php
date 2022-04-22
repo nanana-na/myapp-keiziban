@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="form-group">
-          <input type="time" id="time" name="time" min="05:00" max="24:00" required>
+          <input type="time" id="time" name="time" min="05:00" max="24:00" value="{{ old('time')}}" required>
         </div>
 
         <div class="form-group">

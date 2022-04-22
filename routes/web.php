@@ -47,6 +47,12 @@ Route::resource('users', 'UserController');
 
 Route::resource('asks', 'AskController');
 
+Route::resource('questions', 'QuestionController');
+
+Route::resource('questionitems', 'QuestionItemController');
+
+Route::resource('answers', 'AnswerController');
+
 Route::resource('admins', 'AdminController');
 
 Route::post('/updateimage', 'UserController@updateimage');
