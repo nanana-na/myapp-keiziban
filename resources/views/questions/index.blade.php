@@ -87,8 +87,10 @@
       </div>
       @endforeach
     </div>
+    @if($user_id !== NULL)
     @if(Auth::user()->number == '20238297')
     <a href="/questions/create">作成</a>
+    @endif
     @endif
   </div>
 </div>
