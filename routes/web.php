@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return redirect()->route('posts.index');
+    return redirect()->route('questions.index');
 });
 Route::get('introduction', function () {
     return view('introduction');
