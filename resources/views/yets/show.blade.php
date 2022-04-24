@@ -35,7 +35,7 @@
 </div>
 <div class="mb-4 text-center" style="margin-top:10px">
   <a href="{{route('yets.edit', $yet->id)}}" class="btn btn-primary">
-    編集する
+    許可
   </a>
   <form style="display: inline-block;" method="POST" action="{{ route('yets.destroy', $yet->id) }}">
     {{ csrf_field() }}
