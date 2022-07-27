@@ -63,8 +63,7 @@ class YetController extends Controller
             return view('/error');
         }
         $yet->save();
-        Mail::to('sadaikeiziban22@gmail.com')->send(new Test('新規登録があります'));
-        return redirect()->route('posts.index')->with('flash_message', '認証されるまでしばらくお待ちください。すぐに確認したい場合はInstagramにご連絡ください');;
+        return redirect()->route('posts.index')->with('flash_message', '認証されるまでしばらくお待ちください。すぐに確認したい場合はInstagramにご連絡ください');
     }
 
     /**
