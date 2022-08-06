@@ -8,7 +8,7 @@
 - エックスサーバー(クラウドサーバ)
 
 #### 環境準備
-`git clone`した後
+`git clone`した後、
 `composer install`
 で補足部分を補う。(PHPのversionが違うとエラーが起きる)
 `php artisan storage:link`
