@@ -21,7 +21,7 @@
 
 でシンボリックを通し画像を表示できるようにする。
 
-**storage/app/public/images/** 配下に **circle,friend,job,user,yet,yetuser**が存在するか確認する(なければ作成)。
+**storage/app/public/images/** 配下に **circle/,friend/,job/,user/,yet/,yetuser/**フォルダが存在するか確認する(なければ作成)。
 
 `php artisan migrate`
 
