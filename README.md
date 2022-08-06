@@ -1,7 +1,7 @@
 ## 仕様書
 
 #### デプロイ
-<a href="https://sadaikeiziban.xyz/" target="_blank">https://sadaikeiziban.xyz/</a>
+<a target="_blank" href="https://sadaikeiziban.xyz/">https://sadaikeiziban.xyz/</a>
 
 ### 開発環境
 - Windows(OS)
