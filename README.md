@@ -8,16 +8,26 @@
 - エックスサーバー(クラウドサーバ)
 
 #### 環境準備
-`git clone`した後、
+`git clone`した後
+
 `composer install`
+
 で補足部分を補う。(PHPのversionが違うとエラーが起きる)
+
 `php artisan storage:link`
+
 でシンボリックを通し画像を表示できるようにする。
+
 **storage/app/public/images/**配下に**circle,friend,job,user,yet,yetuser**が存在するか確認(なければ作成)する。
+
 `php artisan migrate`
+
 でDBを製作。
+
 `php artisan db:seed`
+
 で初期データを挿入。
+
 ※作成されたユーザのパスワードは、各自違うのでwebで管理者の新規登録をし一旦登録し、DBのyetテーブルに保存してあるハッシュ化されたpasswordをusrテーブルのpasswordに変更。
 
 #### 工夫した点
