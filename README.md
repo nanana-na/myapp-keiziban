@@ -1,8 +1,9 @@
 ## README
 
 #### デプロイ
-<a target="_blank" href="https://sadaikeiziban.xyz/">https://sadaikeiziban.xyz/</a>
-テストユーザー: 学籍番号　`20000000` パスワード`password`
+<a target="_blank" href="https://sadaikeiziban.xyz/">https://sadaikeiziban.xyz/</a>  
+テストユーザー:  
+学籍番号　`20000000` パスワード`password`
 
 ### 開発環境
 - Windows(OS)
