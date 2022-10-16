@@ -2,6 +2,7 @@
 
 #### デプロイ
 <a target="_blank" href="https://sadaikeiziban.xyz/">https://sadaikeiziban.xyz/</a>
+テストユーザー: 学籍番号　`20000000` パスワード`password`
 
 ### 開発環境
 - Windows(OS)
@@ -17,6 +18,12 @@
 
 で補足部分を補う。(PHPのversionが違うとエラーが起きる)
 
+**.env.sample**をコピーし新たに**.env**ファイルを作成
+`php artisan key:generate`
+
+mysqlのportやパスワードを各自の設定で変更する。
+
+
 `php artisan storage:link`
 
 でシンボリックを通し画像を表示できるようにする。
@@ -31,7 +38,7 @@
 
 で初期データを挿入。
 
-※作成されたユーザのパスワードは、ハッシュ化の影響で各自違うのでwebで新規登録をし一旦登録し、DBのyetテーブルに保存されたハッシュ化されたpasswordをusrテーブルのpasswordに変更。
+マスターユーザー: 学籍番号　`20000000` パスワード`password`
 
 ### 工夫した点
 1. **画像はサーバに保存**し、**DBに画像のリンクを保存**。画像を編集(update)した際は、**元の画像をサーバから削除** する。
